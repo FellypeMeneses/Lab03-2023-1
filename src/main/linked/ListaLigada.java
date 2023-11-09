@@ -12,19 +12,32 @@ public class ListaLigada implements EstruturaElementar{
 
     @Override
     public boolean buscaElemento(int valor) {
-        No n=this.cabeca;
-        for(n.getProximo() ,n=n.getProximo())
-        if(n.getValor()==valor){
-            return=true
+        No n = cabeca;
+    
+        while (n != null) {
+            if (n.getValor() == valor) {
+                return true;
+            }
+            n = n.getProximo();
+        }
+    
+        return false;
     }
-    n.getProximo();{
-        return=false
-    }
+    
+
 
     @Override
     public int buscaIndice(int valor) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'buscaIndice'");
+    int i=0;
+    No n=cabeca;
+    for(n=cabeca;cabeca.getProximo()!=null;n=n.getProximo()){
+        if(n.getValor()==valor){
+            return i;
+        }
+        else
+        i++;
+    }
+    return -i;
     }
 
     @Override
@@ -69,7 +82,7 @@ public class ListaLigada implements EstruturaElementar{
             this.cabeca=new No (valor);
         }
         else{
-            No n= new No(valor;)
+            No n= new No(valor);
             n.setProximo(this.cabeca);
             this.cabeca=n;
         }
