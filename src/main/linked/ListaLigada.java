@@ -17,7 +17,9 @@ public class ListaLigada implements EstruturaElementar{
         if(n.getValor()==valor){
             return=true
     }
-    n.getProximo
+    n.getProximo();{
+        return=false
+    }
 
     @Override
     public int buscaIndice(int valor) {
