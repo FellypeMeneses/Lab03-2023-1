@@ -220,17 +220,20 @@ public class ListaLigada implements EstruturaElementar{
 
     @Override
     public void removeFim(){
-        if (cabeca == null || cabeca.getProximo() == null) {
-            cabeca = null;
+   
+        if(this.cabeca == null || this.cabeca.getProximo()==null){
+            this.cabeca=null;
             return;
         }
         No atual = cabeca;
-        No anterior = null;
+        No antes = null;
 
-        while (atual.getProximo() != null) {
-            anterior = atual;
+        while(atual.getProximo()!=null){
+            antes = atual;
             atual = atual.getProximo();
         }
-        anterior.setProximo(null);
+        antes.setProximo(null);
+        
     }
+    
 }
